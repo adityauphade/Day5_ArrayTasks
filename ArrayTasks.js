@@ -10,7 +10,7 @@ function getRandomNumbers(count){
 getRandomNumbers(10);
 
 //Task1 - find the 2nd largest & 2nd smallest number
-var arr = num;
+var arr = [...num];
 
 const lar1 = Math.max(...arr);
 arr.splice(arr.indexOf(lar1), 1);
@@ -21,3 +21,9 @@ arr.splice(arr.indexOf(small1), 1);
 console.log(`\nThe largest number is: ${lar1}\nThe smallest number is: ${small1}\n`);
 
 console.log(`The 2nd largest number is: ${Math.max(...arr)}\nThe 2nd smallest number is: ${Math.min(...arr)}`);
+
+
+//Task2 - find the 2nd largest & 2nd smallest number by sorting
+ var sorted_num = num.sort(function(a, b) {return a - b;});
+ console.log(`\n\n\nSorted Array: ${sorted_num}`);
+ console.log(`The 2nd Largest number: ${sorted_num.splice(1,1)} & The 2nd Smallest number: ${sorted_num.splice(sorted_num.length-2, 1)}`)
