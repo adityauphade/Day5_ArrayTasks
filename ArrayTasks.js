@@ -30,21 +30,37 @@
 
  //Task3 - Find Prime factors of a given number
 
- var a = 13;
- var pFactors = [];
- divisor = 2;
+//  var a = 13;
+//  var pFactors = [];
+//  divisor = 2;
 
- function getFactors(n){
-     while (n>=2) {
-         if (n % divisor == 0) {
-             pFactors.push(divisor);
-             n = n/divisor;
-         } else {
-             divisor++;
-         }   
-     }
-     return pFactors;
- }
+//  function getFactors(n){
+//      while (n>=2) {
+//          if (n % divisor == 0) {
+//              pFactors.push(divisor);
+//              n = n/divisor;
+//          } else {
+//              divisor++;
+//          }   
+//      }
+//      return pFactors;
+//  }
 
- console.log(`The prime factors of ${a} are: ${getFactors(a)}`);
+//  console.log(`The prime factors of ${a} are: ${getFactors(a)}`);
 
+//Task4 - Sum of 3 any integers from a given array is zero
+
+const arr = [12, 15, -17, -5, -2, -6, -9, 7]
+const triplets = [];
+var final = [];
+
+for(let i=0; i<arr.length - 2; i++){
+    for(let j=i+1; j<arr.length - 1; j++){
+        for(let k=j+1; k<arr.length; k++) {
+            if(arr[i] + arr[j] + arr[k] == 0){
+                console.log(`\n{ ${arr[i]}, ${arr[j]}, ${arr[k]} }`)
+                
+            }
+        }
+    }
+}
