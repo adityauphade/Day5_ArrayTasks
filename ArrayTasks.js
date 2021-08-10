@@ -50,17 +50,29 @@
 
 //Task4 - Sum of 3 any integers from a given array is zero
 
-const arr = [12, 15, -17, -5, -2, -6, -9, 7]
-const triplets = [];
-var final = [];
+// const arr = [12, 15, -17, -5, -2, -6, -9, 7]
+// const triplets = [];
+// var final = [];
 
-for(let i=0; i<arr.length - 2; i++){
-    for(let j=i+1; j<arr.length - 1; j++){
-        for(let k=j+1; k<arr.length; k++) {
-            if(arr[i] + arr[j] + arr[k] == 0){
-                console.log(`\n{ ${arr[i]}, ${arr[j]}, ${arr[k]} }`)
+// for(let i=0; i<arr.length - 2; i++){
+//     for(let j=i+1; j<arr.length - 1; j++){
+//         for(let k=j+1; k<arr.length; k++) {
+//             if(arr[i] + arr[j] + arr[k] == 0){
+//                 console.log(`\n{ ${arr[i]}, ${arr[j]}, ${arr[k]} }`)
                 
-            }
-        }
-    }
+//             }
+//         }
+//     }
+// }
+
+//Task5 - Finding numbers whose digits are duplicate from 1 - 100
+
+const hun = [];
+
+for(let i=1; i<=100; i++){
+    hun.push(i);
 }
+
+const dup = hun.filter(val => val%11 == 0);
+
+console.log(dup);
